@@ -8,6 +8,14 @@ To download a SXR SDK logo PNG file, __right-click file image > Save image as...
 
 |||
 |-|-|
-|Color SXR SDK logo with color text below |![](/images/SXR_Logo_Blue_Text_Below.png)|
-|Color SXR SDK logo with white text below |![](/images/SXR_Logo_White_Text_Below.png)|
-|Color SXR SDK logo with color text to the right |![](/images/SXR_Logo_Blue_Text_Inline.png)|
+|Black Samsung XR logo |![](/images/SamsungxR_Black.png)|
+|Black Samsung XR logo with blue 'x' |![](/images/SamsungxR_Black_BlueX.png)|
+|Blue Samsung XR logo with blue 'x' |![](/images/SamsungxR_Blue_BlueX.png)|
+|White Samsung XR logo|![](/images/SamsungxR_White.png)|
+|White Samsung XR logo with black 'R'|![](/images/SamsungxR_White_BlackR.png)|
+|White Samsung XR logo with blue 'x'|![](/images/SamsungxR_White_BlueX.png)|
+|Black SXR logo|![](/images/SXR_Black.png)|
+|Black SXR logo with white 'x'|![](/images/SXR_Black_WhiteX.png)|
+|Black SXR logo with blue 'x'|![](/images/SXR_Black_BlueX.png)|
+|White SXR logo with blue 'x'|![](/images/SXR_White_BlueX.png)|
+|White SXR logo|![](/images/SXR_White.png)|
