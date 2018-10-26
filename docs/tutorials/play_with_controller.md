@@ -50,7 +50,7 @@ First let's create a quad to display this texture, notice we turn off the depth 
 
 ```java
     SXRTexture cursor_texture = sxrContext.getAssetLoader().loadTexture(new SXRAndroidResource(sxrContext, "cursor.png"));
-    final SXRSceneObject cursor = new SXRSceneObject(sxrContext, sxrContext.createQuad(1f, 1f), cursor_texture);
+    final SXRNode cursor = new SXRNode(sxrContext, sxrContext.createQuad(1f, 1f), cursor_texture);
     cursor.getRenderData().setDepthTest(false);
     cursor.getRenderData().setRenderingOrder(SXRRenderData.SXRRenderingOrder.OVERLAY);
 ```
@@ -58,7 +58,7 @@ First let's create a quad to display this texture, notice we turn off the depth 
 
 ### 2. Collider
 
-In order to know which object dose the user picked in the scene, we need to add collider to the SceneObject.
+In order to know which object dose the user picked in the scene, we need to add collider to the Node.
 
 There are three types of colliders
 
@@ -74,19 +74,19 @@ There are three types of colliders
 
     MeshCollider can detect picking of a complex 3d Model, however it's slower than the previous two.
 
-Collider can be added to any SceneObject as a component
+Collider can be added to any Node as a component
 ```java
     sceneObject.attachComponent(new SXRMeshCollider(getSXRContext(), false));
 ```
 
 You can use the following function to create cubes with collider
 ```java
-    private SXRSceneObject createCube()
+    private SXRNode createCube()
     {
         SXRMaterial material = new SXRMaterial(getSXRContext(), SXRMaterial.SXRShaderType.Color.ID);
         material.setColor(Color.GRAY);
 
-        SXRCubeSceneObject cube = new SXRCubeSceneObject(getSXRContext());
+        SXRCubeNode cube = new SXRCubeNode(getSXRContext());
         cube.getRenderData().setMaterial(material);
 
         cube.attachComponent(new SXRMeshCollider(getSXRContext(), false));
@@ -97,7 +97,7 @@ You can use the following function to create cubes with collider
 
 ### 3. PickHandler
 
-PickHandler will be triggered once the cursor enter/exit a SceneObject with collider, base on the events developer can implement different feedback for the user
+PickHandler will be triggered once the cursor enter/exit a Node with collider, base on the events developer can implement different feedback for the user
 
 PickHandler have 4 major methods, onEnter/onExit/onTouchStart/onTouchEnd
 
@@ -106,14 +106,14 @@ Here is an example of how to use each method
 ```java
     private ITouchEvents mPickHandler = new SXREventListeners.TouchEvents()
     {
-        private SXRSceneObject movingObject;
+        private SXRNode movingObject;
 
-        public void onEnter(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo)
+        public void onEnter(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo)
         {
             sceneObj.getRenderData().getMaterial().setColor(Color.RED);
         }
 
-        public void onTouchStart(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo)
+        public void onTouchStart(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo)
         {
             if (movingObject == null)
             {
@@ -125,7 +125,7 @@ Here is an example of how to use each method
             }
         }
 
-        public void onTouchEnd(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo)
+        public void onTouchEnd(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo)
         {
             sceneObj.getRenderData().getMaterial().setColor(Color.RED);
             if (sceneObj == movingObject)
@@ -135,7 +135,7 @@ Here is an example of how to use each method
             }
         }
 
-        public void onExit(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo)
+        public void onExit(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo)
         {
             sceneObj.getRenderData().getMaterial().setColor(Color.GRAY);
             if (sceneObj == movingObject)

@@ -32,11 +32,11 @@ Make sure to copy both files into `app/src/main/assets` folder
 
 You can load the animated model with following code
 ```java
-    SXRModelSceneObject character = sxrContext.getAssetLoader().loadModel("astro_boy.dae");
+    SXRModelNode character = sxrContext.getAssetLoader().loadModel("astro_boy.dae");
     character.getTransform().setRotationByAxis(45.0f, 0.0f, 1.0f, 0.0f);
     character.getTransform().setScale(6, 6, 6);
     character.getTransform().setPosition(0.0f, -0.5f, -1f);
-    sxrContext.getMainScene().addSceneObject(character);
+    sxrContext.getMainScene().addNode(character);
 ```
 
 And play the animation with `SXRAnimator`, here we make sure the animation in looping forever with the `setRepeatCount` set to -1

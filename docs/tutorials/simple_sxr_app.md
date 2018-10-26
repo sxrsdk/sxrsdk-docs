@@ -46,19 +46,19 @@ Adding an object to the scene is simple, Just create the object and specify the 
 
 First, let's add a new member variable for the Cube to the `MainScene`
 ```java
-    SXRSceneObject mCube
+    SXRNode mCube
 ```
 
 Then add the cube to our scene with following code in `onInit()` function
 ```java
     //Create a cube
-    mCube = new SXRCubeSceneObject(sxrContext);
+    mCube = new SXRCubeNode(sxrContext);
 
     //Set position of the cube at (0, -2, -3)
     mCube.getTransform().setPosition(0, -2, -3);
 
     //Add cube to the scene
-    sxrContext.getMainScene().addSceneObject(mCube);
+    sxrContext.getMainScene().addNode(mCube);
 ```
 
 Build and run the app, you should be able to see a white cube on the screen

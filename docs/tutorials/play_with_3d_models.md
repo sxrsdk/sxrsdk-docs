@@ -52,16 +52,16 @@ GVRTexture dinoTexture = gvrContext.getAssetLoader().loadTexture(
 
 After 3D model and texture both loaded, we can add them to the scene with a scene object
 ```java
-    GVRSceneObject dinoObj = new GVRSceneObject(gvrContext, dinoMesh, dinoTexture);
+    GVRNode dinoObj = new GVRNode(gvrContext, dinoMesh, dinoTexture);
 
     dinoObj.getTransform().setPosition(0,0,-10);
     dinoObj.getTransform().rotateByAxis(-90, 1f, 0f, 0f);
-    gvrContext.getMainScene().addSceneObject(dinoObj);
+    gvrContext.getMainScene().addNode(dinoObj);
 
 ```
 
 !!!note
-    We create `GVRSceneObject` instead of use `AssetLoader.loadModel()` because `loadModel()` require fbx files to have correct path to texture file which a lot of 3D modeling software failed to produce.
+    We create `GVRNode` instead of use `AssetLoader.loadModel()` because `loadModel()` require fbx files to have correct path to texture file which a lot of 3D modeling software failed to produce.
 
 
 Build and run the app, you should be able to see a T-Rex!

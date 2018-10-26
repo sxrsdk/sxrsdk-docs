@@ -1,8 +1,8 @@
 ## Overview
 
-The SXR SDK follows component-entity mode, each SceneObject consists of multiple components that control different aspects of the SceneObject such as transformation, rendering, collision detection. When we use functions like `getTransform()` or `getRenderData()`, it actually uses `getComponent()` underneath.
+The SXR SDK follows component-entity mode, each Node consists of multiple components that control different aspects of the Node such as transformation, rendering, collision detection. When we use functions like `getTransform()` or `getRenderData()`, it actually uses `getComponent()` underneath.
 
-In this tutorial, we're going to create our own component for the SceneObject and use it in your app/game.
+In this tutorial, we're going to create our own component for the Node and use it in your app/game.
 
 ##Create Project
 Create an SXR project by copying the [template project](https://github.com/sxrsdk/sxrsdk-demos/tree/master/template/SXRApplication) 
@@ -16,7 +16,7 @@ Perform the following steps to make sure your project runs correctly
 ## Create a new component
 To create a new component, simply create a new class that extends `SXRBehavior`.
 
-In this case, we create a class called `RotateBehavior`, simply makes `SceneObject` to rotate.
+In this case, we create a class called `RotateBehavior`, simply makes `Node` to rotate.
 
 ```java
 public class RotateBehavior extends SXRBehavior {
@@ -37,19 +37,19 @@ public class RotateBehavior extends SXRBehavior {
 
 Note that we have a static field called `TYPE_Rotate_behavior` as well as a function `getComponentType()`.
 
-It will be useful when we need to access this component from a `SceneObject` later.
+It will be useful when we need to access this component from a `Node` later.
 
 !!!note
-    If we want to access this component from a `SceneObject` we can use `SceneObject.getComponent(RotateBehavior.getComponentType())`
+    If we want to access this component from a `Node` we can use `Node.getComponent(RotateBehavior.getComponentType())`
 
 ## Customize logic
 `SXRBehavior` provides couple methods that you can override to customize your behavior.
 
-* `onAttach()` will trigger when the component is attached to a `SceneObject`
-* `onDetach` will trigger when the component is detached from the `SceneObject`
+* `onAttach()` will trigger when the component is attached to a `Node`
+* `onDetach` will trigger when the component is detached from the `Node`
 * `onDrawFrame` will trigger everytime a new frame is drawn
 
-In this case, we're going to use `onDrawFrame` because `RotationBehavior` will change the rotation of the `SceneObject` every frame.
+In this case, we're going to use `onDrawFrame` because `RotationBehavior` will change the rotation of the `Node` every frame.
 
 Override the `onDrawFrame` as following
 ```java
@@ -65,9 +65,9 @@ Basically, this means to rotate the object 1 degree on each frame.
 
 ## Use components
 
-In order to see our newly created component in action, we need to attach it to a `SceneObject`. Simply call `attachComponent()`.
+In order to see our newly created component in action, we need to attach it to a `Node`. Simply call `attachComponent()`.
 
-To access the component on a `SceneObject`, use `getComponent(RotateBehavior.getComponentType())`
+To access the component on a `Node`, use `getComponent(RotateBehavior.getComponentType())`
 
 ## Source Code
 Complete [Source Code](https://github.com/nitosan/sxrsdk-samples/tree/master/sample_billboard) for this sample 

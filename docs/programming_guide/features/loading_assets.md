@@ -33,13 +33,13 @@ public void onInit(SXRContext context)
     SXRScene scene = context.getMainScene();
     try
     {
-        String url = "https://raw.githubusercontent.com/gearvrf/sxrsdk-demos/master/sxrjassimpmodelloader/assets/trees/trees9.3ds";
-        SXRSceneObject model1 = context.getAssetLoader().loadModel(url, scene);
+        String url = "https://raw.githubusercontent.com/sxrsdk/sxrsdk-demos/master/sxrjassimpmodelloader/assets/trees/trees9.3ds";
+        SXRNode model1 = context.getAssetLoader().loadModel(url, scene);
         model1.getTransform().setPosition(0.0f, -4.0f, -20.0f);
 
         SXRAndroidResource resource = new SXRAndroidResource(context, R.raw.spaceship);
     	EnumSet<SXRImportSettings> settings = SXRImportSettings.getRecommendedSettings();
-    	SXRSceneObject model2 = context.getAssetLoader().loadModel(resource, settings, true, scene);
+    	SXRNode model2 = context.getAssetLoader().loadModel(resource, settings, true, scene);
         model2.getTransform().setPositionZ(-10.0f);
     }
     catch (IOException e)
@@ -83,18 +83,18 @@ The asynchronous forms of *loadModel* specify the input asset as a *SXRResourceV
 This example waits for a model to be loaded from the assets directory and then centers it before adding it to the scene.
 ```java
 SXRScene scene;
-SXRSceneObject root = new SXRSceneObject(context);
+SXRNode root = new SXRNode(context);
 SXRResourceVolume volume = new SXRResourceVolume(context, "models/mymodel.fbx");
 
 context.getAssetLoader().loadModel(root, volume, new IAssetEvents()
 {
-	public void onAssetLoaded(SXRContext context, SXRSceneObject model, String filePath, String errors);
+	public void onAssetLoaded(SXRContext context, SXRNode model, String filePath, String errors);
     {
     	BoundingVolume bv = model.getBoundingVolume();
         Vector3f c = bv.center();
         model.getTransform().setPosition(-c.x, -c.y, -c.z - 1.0f);
     }
-    public void onModelLoaded(SXRContext context, SXRSceneObject model, String filePath) { }
+    public void onModelLoaded(SXRContext context, SXRNode model, String filePath) { }
     public void onTextureLoaded(SXRContext context, SXRTexture texture, String filePath) { }
     public void onModelError(SXRContext context, String error, String filePath) { }
     public void onTextureError(SXRContext context, String error, String filePath) { }
@@ -112,10 +112,10 @@ This example shows how to load a cubemap texture from a ZIP file and apply use i
 ```java
 SXRTexture tex = ctx.getAssetLoader().loadCubemapTexture(new SXRAndroidResource(ctx, R.raw.beach));
 SXRMaterial cubeMapMtl = new SXRMaterial(ctx, SXRMaterial.SXRShaderType.Cubemap.ID);
-SXRSceneObject skybox = new SXRCubeSceneObject(ctx, false, cubeMapMtl);
+SXRNode skybox = new SXRCubeNode(ctx, false, cubeMapMtl);
 
 cubeMapMtl.setTexture("u_texture", tex);
 skybox.getTransform().setScale(10, 10, 10);
 skybox.setName("background");
-scene.addSceneObject(skybox);
+scene.addNode(skybox);
 ```

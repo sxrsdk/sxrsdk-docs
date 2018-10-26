@@ -59,12 +59,12 @@ SXRSpotLight createSpotLight(SXRContext sxrContext)
     return light;
 }
 ```
-You need to attach your light to a SXRSceneObject before it can illuminate anything. To enable multiple lighting support the SXRPhongShader template must be selected. You can also turn the lighting effect on and off for a particular mesh. In this example we light a sphere with the spot light created above.
+You need to attach your light to a SXRNode before it can illuminate anything. To enable multiple lighting support the SXRPhongShader template must be selected. You can also turn the lighting effect on and off for a particular mesh. In this example we light a sphere with the spot light created above.
 ```java
 SXRLightBase light = createSpotLight(sxrContext);
-SXRSceneObject lightNode = new SXRSceneObject(sxrContext);
+SXRNode lightNode = new SXRNode(sxrContext);
 SXRMaterial material = new new SXRMaterial(sxrContext, SXRMaterial.SXRShaderType.Phong.ID);
-SXRSceneObject sphereNode = new SXRSphereSceneObject(sxrContext, material);
+SXRNode sphereNode = new SXRSphereNode(sxrContext, material);
 
 material.setVec4("diffuse_color", 1.0f, 0.8f, 0.5f, 1.0f);
 material.setVec4("specular_color", 1.0, 1.0, 1.0, 1.0f);
