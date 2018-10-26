@@ -103,15 +103,15 @@ In addition to displaying geometry, a scene object can display text, 360 photos,
 
 | Scene Object Class | Description |
 |--------------------|-------------|
-| SXRSphereSceneObject	| 	constructs sphere geometry |
-| SXRCubeSceneObject	|	construct cube geometry |
-| SXRConeSceneObject	| 	constructs cone geometry |
-| SXRCylinderSceneObject| 	constructs cylinder geometry |
-| SXRTextViewSceneObject| 	displays text |
-| SXRVideoSceneObject	| 	displays a video |
-| SXRWebViewSceneObject	| 	displays an internet browser window |
-| SXRCameraSceneObject	| 	displays video from the phone camera |
-| SXRKeyboardSceneObject | 	displays 3D interactive keyboard |
+| SXRSphereNode	| 	constructs sphere geometry |
+| SXRCubeNode	|	construct cube geometry |
+| SXRConeNode	| 	constructs cone geometry |
+| SXRCylinderNode| 	constructs cylinder geometry |
+| SXRTextViewNode| 	displays text |
+| SXRVideoNode	| 	displays a video |
+| SXRWebViewNode	| 	displays an internet browser window |
+| SXRCameraNode	| 	displays video from the phone camera |
+| SXRKeyboardNode | 	displays 3D interactive keyboard |
 
 
 ## Scene Construction Example
@@ -124,9 +124,9 @@ Constructing the initial SXR scene usually involves importing a set of assets an
 	SXRContext context;
 	SXRTexture wingtex = context.getAssetLoader().loadTexture(
     	new SXRAndroidResource(context, R.drawable.wingtex));
-	SXRSceneObject body = new SXRSphereObject(context);
-	SXRSceneObject leftwing = new SXRSceneObject(context, wingtex);
-	SXRSceneObject rightwing = new SXRSceneObject(context, wingtex);
+	SXRNode body = new SXRSphereObject(context);
+	SXRNode leftwing = new SXRNode(context, wingtex);
+	SXRNode rightwing = new SXRNode(context, wingtex);
 	leftwing.getTransform().setPosition(-1, 0, 0);
 	rightwing.getTransform().setPosition(1, 0, 0);
 	rightwing.getTransform().setRotationY(180);
@@ -142,7 +142,7 @@ A scene object can have one or more components attached which provide additional
 
 
 
-The following components can be attached to a SXRSceneObject:
+The following components can be attached to a SXRNode:
 
 * SXRTransform - 4x4 transformation matrix
 * SXRRenderData - geometry with material properties
@@ -160,7 +160,7 @@ Each scene object can only have one component of a particular type. For example,
 
 
 
-| SXRSceneObject  function | Description |
+| SXRNode  function | Description |
 |--------------------|-------------|
 |SXRComponent getComponent(long type) |	Get the component of the specified class attached to the owner scene object.|
 |void attachComponent(SXRComponent) |	Attach the given component to the scene object.|

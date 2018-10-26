@@ -33,11 +33,11 @@ SXRTexture texture =
 
 Add the following code to create a sphere and apply the texture we previously loaded
 ```java
-	SXRSphereSceneObject sphere = 
-		new SXRSphereSceneObject(sxrContext, false, texture);
+	SXRSphereNode sphere = 
+		new SXRSphereNode(sxrContext, false, texture);
 
 	//Add Sphere to the scene
-    sxrContext.getMainScene().addSceneObject(sphere);
+    sxrContext.getMainScene().addNode(sphere);
 ```
 
 !!!note

@@ -71,11 +71,11 @@ SXRMesh createMesh(SXRContext sxrContext)
 }
 ```
 
-You need to attach your mesh to a SXRSceneObject before it can be displayed. The SXRRenderData object holds both a mesh and a material. Each visible scene object must have render data. This code adds the newly constructed mesh to the scene. Here we assume the SXRMaterial has already been constructed.
+You need to attach your mesh to a SXRNode before it can be displayed. The SXRRenderData object holds both a mesh and a material. Each visible scene object must have render data. This code adds the newly constructed mesh to the scene. Here we assume the SXRMaterial has already been constructed.
 
 ```java
 SXRMesh mesh = createMesh(sxrContext);
-SXRSceneObject obj = new SXRSceneObject(sxrContext, mesh);
+SXRNode obj = new SXRNode(sxrContext, mesh);
 SXRRenderData rdata = obj.getRenderData();
 rdata.setMaterial(material);
 ```
@@ -103,7 +103,7 @@ cubeVerts.setFloatArray("a_texcoord", uv);
 face1Tris.setShortVec(new char[] { 0, 1, 2, 2, 1, 3 });
 face2Tris.setShortVec(new char[] { 4, 5, 6, 6, 5, 7 });
 
-SXRSceneObject object1 = new SXRSceneObject(context, mesh1);
-SXRSceneObject object2 = new SXRSceneObject(context, mesh2);
+SXRNode object1 = new SXRNode(context, mesh1);
+SXRNode object2 = new SXRNode(context, mesh2);
 ```
 

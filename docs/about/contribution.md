@@ -49,10 +49,10 @@ When generating you own SXR project code, please follow these guidelines.
 * In C++:
     * Use underscore case for names (for example, sxr_foo).
     * Put all JNI interface calls in a separate file with the postfix _jni. 
-    <br/>For example, put the JNI interfaces for SXRSceneObject in a separate file scene_object_jni.cpp
+    <br/>For example, put the JNI interfaces for SXRNode in a separate file node_jni.cpp
     * Follow the actual logic in plain C++ .h and .cpp files.
     * For each new C++ file that has a correlative Java SXR class, do not add SXR as a prefix to the file name. 
-    <br/>For example, for SXRSceneObject.java, the C++ file name would be scene_object.cpp/scene_object.h
+    <br/>For example, for SXRNode.java, the C++ file name would be node.cpp/node.h
     * Set up and use the auto-formatter for C++ code in Eclipse (see below).
 
 

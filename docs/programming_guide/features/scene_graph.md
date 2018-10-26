@@ -37,7 +37,7 @@ __To create a scene object from from a file:__
 
 ```java
 	// load mesh using assimp
-	SXRSceneObject model = sxrContext.getAssetLoader().loadModel("sphere.obj", SXRResourceVolume.VolumeType.ANDROID_ASSETS, sxrScene);
+	SXRNode model = sxrContext.getAssetLoader().loadModel("sphere.obj", SXRResourceVolume.VolumeType.ANDROID_ASSETS, sxrScene);
 ```
 
 Usually it is more efficient to let the asset loader create the meshes and textures for you. Bu you can also load only a mesh and construct the scene object, material and render data programmatically. 
@@ -59,7 +59,7 @@ __To create a scene object with shader-only material via render data:__
 	sphereRenderData.setMaterial(sphereMaterial);
 
 	// create scene object
-	sphereObject = new SXRSceneObject(sxrContext);
+	sphereObject = new SXRNode(sxrContext);
 	sphereObject.attachRenderData(sphereRenderData);
 ```
 
@@ -70,7 +70,7 @@ After scene objects are added to the scene graph, each scene object can be contr
 __To set the position of a scene object and rotate it about an axis with a pivot point:__
 
 ```java
-	SXRSceneObject rotator = new SXRSceneObject(mSXRContext, 2.0f, 1.0f, rotatorTextures.get(i));
+	SXRNode rotator = new SXRNode(mSXRContext, 2.0f, 1.0f, rotatorTextures.get(i));
 	rotator.getTransform().setPosition(0.0f, 0.0f, -5.0f);
 	float degree = 360.0f * i / (rotatorTextures.size() + 1);
 	rotator.getTransform().rotateByAxisWithPivot(degree, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);

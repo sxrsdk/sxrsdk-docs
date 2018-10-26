@@ -27,7 +27,7 @@ For mesh colliders, you can enable coordinate picking in the constructor and the
 
 |Field|Type|Description|
 |-----|----|-----------|
-|hitObject |	SXRSceneObject |	the scene object that was hit|
+|hitObject |	SXRNode |	the scene object that was hit|
 |hitCollider |	SXRCollider |	the collider that was hit|
 |hitPosition |	float[3] |	X, Y, Z coordinates of where collider was hit|
 |hitDistance |	float |	distance from camera in world coordinates|
@@ -50,15 +50,15 @@ This example shows how to use picking events to do selection highlighting. When 
 ```java
 public class PickHandler implements IPickEvents
 {
-    public void onEnter(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo)
+    public void onEnter(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo)
     {
          sceneObj.getRenderData().getMaterial().setDiffuseColor(1, 0, 0, 1);
     }
-    public void onExit(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo)
+    public void onExit(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo)
     {
         sceneObj.getRenderData().getMaterial().setDiffuseColor(1, 1, 1, 1);
     }
-    public void onInside(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo) { }
+    public void onInside(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo) { }
     public void onPick(SXRPicker) { }
     public void onNoPick(SXRPicker) { }
 }
@@ -66,14 +66,14 @@ public class PickHandler implements IPickEvents
 public void onInit(SXRContext context)
 {
      SXRScene scene = context.getMainScene();
-     SXRSceneObject sphere = new SXRSphereSceneObject(context);
+     SXRNode sphere = new SXRSphereNode(context);
      SXRPicker picker = new SXRPicker(scene, true);
      
      picker.getEventReceiver().addListener(new PickHandler());
      scene.getMainCameraRig().getOwnerObject().attachComponent(picker));
      sphere.getTransform().setPositionZ(-2.0f);
      sphere.attachComponent(new SXRSphereCollider(context));
-     scene.addSceneObject(sphere);
+     scene.addNode(sphere);
  }
 ```
 
@@ -90,8 +90,8 @@ This example shows how to use touch events to drag an object with the controller
 ```java
 public class TouchHandler implements SXREventListeners.TouchEvents
 {
-    private SXRSceneObject mDragged = null;
-    public void onTouchStart(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo)
+    private SXRNode mDragged = null;
+    public void onTouchStart(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo)
     {
     	if (mDragged == null)
         {
@@ -104,7 +104,7 @@ public class TouchHandler implements SXREventListeners.TouchEvents
         }
     }
     
-    public void onTouchEnd(SXRSceneObject sceneObj, SXRPicker.SXRPickedObject pickInfo)
+    public void onTouchEnd(SXRNode sceneObj, SXRPicker.SXRPickedObject pickInfo)
     {
     	if (mDragged == sceneObj)
         {
@@ -127,11 +127,11 @@ public class ControllerSelector implements ICursorControllerSelectListener
 public void onInit(SXRContext context)
 {
      SXRScene scene = context.getMainScene();
-     SXRSceneObject sphere = new SXRSphereSceneObject(context);
+     SXRNode sphere = new SXRSphereNode(context);
      
      sphere.getTransform().setPositionZ(-2.0f);
      sphere.attachComponent(new SXRSphereCollider(context));
-     scene.addSceneObject(sphere);
+     scene.addNode(sphere);
      context.getInputManager().selectController(new ControllerSelector());
  }
 ```

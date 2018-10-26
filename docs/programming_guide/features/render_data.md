@@ -1,4 +1,4 @@
-The render data component is what makes a scene object visible. It provides both geometry and appearance properties. The geometry is a single SXRMesh object which contains a set of indexed vertices. The appearance is a SXRMaterial object which contains a set of key/value pairs defining the variables to be sent to the shader. The shader is a program that executes on the GPU. During rendering, SXR manages data flow between your application and the GPU, sending the meshes and materials to the GPU as they are needed. This may require SXR to compile and load a shader into the GPU while your application is running. This may happen when you add something to the scene using SXRScene.addSceneObject. The render data component also controls how your mesh is rendered. You can enable or disable lighting, display an object only on one eye and control the order of rendering using its functions.
+The render data component is what makes a scene object visible. It provides both geometry and appearance properties. The geometry is a single SXRMesh object which contains a set of indexed vertices. The appearance is a SXRMaterial object which contains a set of key/value pairs defining the variables to be sent to the shader. The shader is a program that executes on the GPU. During rendering, SXR manages data flow between your application and the GPU, sending the meshes and materials to the GPU as they are needed. This may require SXR to compile and load a shader into the GPU while your application is running. This may happen when you add something to the scene using SXRScene.addNode. The render data component also controls how your mesh is rendered. You can enable or disable lighting, display an object only on one eye and control the order of rendering using its functions.
 
 |SXRRenderData Function|Description|
 |---|---|
@@ -31,7 +31,7 @@ A render pass lets you render the same scene object multiple times with differen
 This example shows how to implement a multi-sided material using render passes. It uses a red material for the front faces and a blue material for the back faces. 
 
 ```java
-SXRSceneObject cube = new SXRCubeSceneObject(sxrContext);
+SXRNode cube = new SXRCubeNode(sxrContext);
 SXRRenderData rdata = cube.getRenderData();
 SXRMaterial red = rdata.getMaterial();
 SXRMaterial blue = new SXRMaterial(sxrContext);

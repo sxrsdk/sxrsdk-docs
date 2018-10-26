@@ -41,30 +41,30 @@ package com.example.org.sxrfapplication;
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 
-import org.gearvrf.SXRContext;
-import org.gearvrf.SXRMesh;
-import org.gearvrf.SXRSceneObject;
-import org.gearvrf.scene_objects.SXRSphereSceneObject;
-import org.gearvrf.scene_objects.SXRVideoSceneObject;
-import org.gearvrf.scene_objects.SXRVideoSceneObjectPlayer;
+import com.samsungxr.SXRContext;
+import com.samsungxr.SXRMesh;
+import com.samsungxr.SXRNode;
+import com.samsungxr.nodes.SXRSphereNode;
+import com.samsungxr.nodes.SXRVideoNode;
+import com.samsungxr.nodes.SXRVideoNodePlayer;
 
 import java.io.IOException;
 
-public class SXRVideoPlayerObject extends SXRSceneObject{
+public class SXRVideoPlayerObject extends SXRNode{
 
-    private final SXRVideoSceneObjectPlayer<?> mPlayer;
+    private final SXRVideoNodePlayer<?> mPlayer;
     private final MediaPlayer mMediaPlayer;
 
     public SXRVideoPlayerObject(SXRContext sxrContext) {
         super(sxrContext);
 
-        SXRSphereSceneObject sphere = new SXRSphereSceneObject(sxrContext, 72, 144, false);
+        SXRSphereNode sphere = new SXRSphereNode(sxrContext, 72, 144, false);
         SXRMesh mesh = sphere.getRenderData().getMesh();
 
         mMediaPlayer = new MediaPlayer();
-        mPlayer = SXRVideoSceneObject.makePlayerInstance(mMediaPlayer);
+        mPlayer = SXRVideoNode.makePlayerInstance(mMediaPlayer);
 
-        SXRVideoSceneObject video = new SXRVideoSceneObject(sxrContext, mesh, mPlayer, SXRVideoSceneObject.SXRVideoType.MONO);
+        SXRVideoNode video = new SXRVideoNode(sxrContext, mesh, mPlayer, SXRVideoNode.SXRVideoType.MONO);
         video.getTransform().setScale(100f, 100f, 100f);
 
         addChildObject(video);
@@ -121,7 +121,7 @@ Load and play 360 video
         mPlayerObj.setLooping(true);
         mPlayerObj.play();
 
-        sxrContext.getMainScene().addSceneObject(mPlayerObj);
+        sxrContext.getMainScene().addNode(mPlayerObj);
 ```
 
 Add `onResume` and `onPause` functions to the `MainScene` class

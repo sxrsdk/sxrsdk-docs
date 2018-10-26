@@ -42,7 +42,7 @@ Getting started with the SXR SDK in few simple steps
     1. in `app/build.gradle` 
 
         ```
-    compile "org.gearvrf:backend_oculus:$gearvrfVersion"
+    compile "com.samsungxr:backend_oculus:$gearvrfVersion"
         ```
 
     1. in `AndroidManifest.xml`

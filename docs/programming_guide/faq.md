@@ -1,7 +1,7 @@
 
 ### 1. Is there any example of object following the head tracking, just like a reticle?
 
-See [sxr-tutorial-lesson2 sample](https://github.com/sxrsdk/sxrsdk-demos/blob/master/sxr-tutorial-lesson2/app/src/main/java/org/gearvrf/balloons/BalloonMain.java#L51). Examine the BalloonMain.java and the headTracker tracker object it sets up. The key part is adding the object to the main camera rig.
+See [sxr-tutorial-lesson2 sample](https://github.com/sxrsdk/sxrsdk-demos/blob/master/sxr-tutorial-lesson2/app/src/main/java/com.samsungxr/balloons/BalloonMain.java#L51). Examine the BalloonMain.java and the headTracker tracker object it sets up. The key part is adding the object to the main camera rig.
 
 ### 2. I want to implement a scrollable list of item like ListView in Android. How to go about that?
 

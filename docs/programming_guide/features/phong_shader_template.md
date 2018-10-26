@@ -22,7 +22,7 @@ Each light type has a corresponding color uniform to define the overall object c
 ```java
 	SXRTexture tex = context.getAssetLoader().loadTexture(new SXRAndroidResource(mSXRContext, R.drawable.sxrlogo));
 	SXRMaterial material = new SXRMaterial(context, SXRMaterial.SXRShaderType.Phong.ID);
-	SXRSceneObject plane = new SXRSceneObject(context, 10.0f, 4.0f,
+	SXRNode plane = new SXRNode(context, 10.0f, 4.0f,
     										 "float3 a_position float2 a_texcoord float3 a_normal", material);
 
 	material.setVec4("diffuse_color", 0.8f, 0.8f, 0.8f, 1.0f);

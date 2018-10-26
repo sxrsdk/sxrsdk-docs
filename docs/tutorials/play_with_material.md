@@ -20,26 +20,26 @@ For example with the correct material, you can make your 3D objects looks like b
 
 >By CaliCoastReplay - Own work, [CC BY 4.0](https://commons.wikimedia.org/w/index.php?curid=55131278)
 
-## Create SceneObjects
+## Create Nodes
 First, let's create one cube and one sphere
 
 ```java
-    SXRCubeSceneObject mCube;
-    SXRSphereSceneObject mSphere;
+    SXRCubeNode mCube;
+    SXRSphereNode mSphere;
 ```
 
 and initialize them in `onInit` function
 
 ```java
     //Create Shpere
-    mSphere = new SXRSphereSceneObject(sxrContext);
+    mSphere = new SXRSphereNode(sxrContext);
     mSphere.getTransform().setPosition(1, 0, -3);
-    sxrContext.getMainScene().addSceneObject(mSphere);
+    sxrContext.getMainScene().addNode(mSphere);
 
     //Create Cube
-    mCube = new SXRCubeSceneObject(sxrContext);
+    mCube = new SXRCubeNode(sxrContext);
     mCube.getTransform().setPosition(-1, 0, -3);
-    sxrContext.getMainScene().addSceneObject(mCube);
+    sxrContext.getMainScene().addNode(mCube);
 ```
 
 
@@ -109,11 +109,11 @@ First, let's add a light to the scene using following code
     pointLight = new SXRPointLight(sxrContext);
     pointLight.setDiffuseIntensity(0.9f, 0.7f, 0.7f, 1.0f);
 
-    SXRSceneObject lightNode = new SXRSceneObject(sxrContext);
+    SXRNode lightNode = new SXRNode(sxrContext);
     lightNode.getTransform().setPosition(0,0,0);
     lightNode.attachLight(pointLight);
 
-    sxrContext.getMainScene().addSceneObject(lightNode);
+    sxrContext.getMainScene().addNode(lightNode);
 ```
 
 The code snippet will create a light with diffuse color of (0.9, 0.7, 0.7) this will give the scene a red tone.
