@@ -1,11 +1,10 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 <style>
 
@@ -186,6 +185,10 @@
     -moz-osx-font-smoothing:grayscale;
 }
 
+.sample_card {
+    height: 380px;
+}
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
     
@@ -288,7 +291,6 @@
                 <a class="button btn_red"  style="color: white;" href="getting_started">
                     Getting Started
                 </a>
-
                 <a class="typeform-share button btn_blue" style="color: white;" href="https://nitosan.typeform.com/to/fw9Ylx" data-mode="popup" style="" target="_blank">
                     Leave Feedback
                 </a>
@@ -300,54 +302,102 @@
             <h1>Sample Highlights</h1>
         </div>
         <div class="col-12 col-lg-3">
-            <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-360photo">
-                <img src="/images/samples/img_1_360photo.png">
-            </a>
-            <p>A minimal sample showing how to display an equirectangular (360) photo.</p>
+            <div class="card mb-3 sample_card">
+                <img class="card-img-top" src="/images/samples/img_1_360photo.png" alt="360 Photo">
+                <div class="card-body">
+                    <h5 class="card-title">360 Photo</h5>
+                    <p class="card-text">A minimal sample showing how to display an equirectangular (360) photo.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-360photo" class="btn btn-primary" style="color:white;">Source</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3" >
+            <div class="card mb-3 sample_card">
+                <img class="card-img-top" src="/images/samples/img_2_360video.png" alt="360 Video">
+                <div class="card-body">
+                    <h5 class="card-title">360 Video</h5>
+                    <p class="card-text">A minimal sample showing how to display an equirectangular (360) video.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-360video" class="btn btn-primary" style="color:white;">Source</a>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-lg-3">
-            <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-360video">
-                <img src="/images/samples/img_2_360video.png">
-            </a>
-            <p>A minimal sample showing how to display an equirectangular (360) video.</p>
+            <div class="card mb-3 sample_card">
+                <img class="card-img-top" src="/images/samples/img_3_3dcursor.png" alt="3D Cursor">
+                <div class="card-body">
+                    <h5 class="card-title">3D Cursor</h5>
+                    <p class="card-text">A simplified version of the sxr-3dcursor sample that shows how to use the 3DCursor plugin.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-3dcursor" class="btn btn-primary" style="color:white;">Source</a>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-lg-3">
-            <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-3dcursor">
-                <img src="/images/samples/img_3_3dcursor.png">
-            </a>
-            <p>A simplified version of the sxr-3dcursor sample that shows how to use the 3DCursor plugin.</p>
-        </div>
-        <div class="col-12 col-lg-3">
-            <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-accessibility">
-                <img src="/images/samples/img_4_accessibility.png">
-            </a>
-            <p>Shows how to use SXR's accessibility classes. For example: InvertedColors, TextToSpeech, and Zoom.</p>
+            <div class="card mb-3 sample_card">
+                <img class="card-img-top" src="/images/samples/img_4_accessibility.png" alt="Accessibility">
+                <div class="card-body">
+                    <h5 class="card-title">Accessibility</h5>
+                    <p class="card-text">Shows how to use SXR's accessibility classes. For example: InvertedColors, TextToSpeech, and Zoom.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-accessibility" class="btn btn-primary" style="color:white;">Source</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-lg-3">
-            <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-controller">
-                <img src="/images/samples/img_9_controller.png">
-            </a>
-            <p>A simple sample that demostrates how to use VR controller.</p>
+            <div class="card mb-3 sample_card">
+                <img class="card-img-top" src="/images/samples/img_9_controller.png" alt="Controller">
+                <div class="card-body">
+                    <h5 class="card-title">Controller</h5>
+                    <p class="card-text">A simple sample that demostrates how to use VR controller.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-controller" class="btn btn-primary" style="color:white;">Source</a>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-lg-3">
-            <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-solarsystem">
-                <img src="/images/samples/img_32_solarsystem.png">
-            </a>
-            <p>A sample that shows both heirarchy and animation.</p>
+            <div class="card mb-3 sample_card">
+                <img class="card-img-top" src="/images/samples/img_32_solarsystem.png" alt="Controller">
+                <div class="card-body">
+                    <h5 class="card-title">Solar System</h5>
+                    <p class="card-text">A sample that shows both heirarchy and animation.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-solarsystem" class="btn btn-primary" style="color:white;">Source</a>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-lg-3">
-            <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-immersivepedia">
-                <img src="/images/samples/img_15_immersepedia.png">
-            </a>
-            <p>A larger sample that shows a concept of an immersive virtual museum.</p>
+            <div class="card mb-3 sample_card">
+                <img class="card-img-top" src="/images/samples/img_15_immersepedia.png" alt="Immersivepedia">
+                <div class="card-body">
+                    <h5 class="card-title">Immersivepedia</h5>
+                    <p class="card-text">A larger sample that shows a concept of an immersive virtual museum.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-immersivepedia" class="btn btn-primary" style="color:white;">Source</a>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-lg-3">
-            <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-javascript">
-                <img src="/images/samples/img_16_javascript.png">
-            </a>
-            <p>A minimal example showing how an application can be written with Javascript.</p>
+            <div class="card mb-3 sample_card">
+                <img class="card-img-top" src="/images/samples/img_16_javascript.png" alt="Javascript">
+                <div class="card-body">
+                    <h5 class="card-title">Javascript</h5>
+                    <p class="card-text">A minimal example showing how an application can be written with Javascript.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/sxrsdk/sxrsdk-demos/tree/master/sxr-javascript" class="btn btn-primary" style="color:white;">Source</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

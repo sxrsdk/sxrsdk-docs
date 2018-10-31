@@ -3,7 +3,7 @@ site_description: Documentation for the Samsung XR SDK
 site_author: Samsung XR SDK Team
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2017 Samsung'
+copyright: 'Copyright &copy; 2016 - 2018 Samsung'
 
 repo_url: https://github.com/sxrsdk/sxrsdk-docs
 edit_uri: edit/master/docs/
@@ -20,7 +20,6 @@ google_analytics:
 markdown_extensions:
   - admonition
   - codehilite
-#  - toc(permalink=true)
   - pymdownx.magiclink
 #  - fontawesome_markdown
 
