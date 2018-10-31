@@ -14,7 +14,7 @@ extra_css:
   - 'stylesheets/extra.css'
 
 google_analytics:
-  - 'UA-105100670-1'
+  - 'UA-105100670-2'
   - 'auto'
 
 markdown_extensions:
