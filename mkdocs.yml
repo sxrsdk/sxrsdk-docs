@@ -25,35 +25,40 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started: getting_started.md
-  - Tutorials:
-    - Simple SXR app: tutorials/simple_sxr_app.md
-    - Play With Materials: tutorials/play_with_material.md
-    - Play With 3D Models: tutorials/play_with_3d_models.md
-    - Play With Animation: tutorials/play_with_animation.md
-    - Play With Controller: tutorials/play_with_controller.md
-    - Play With 360 Video: tutorials/play_with_360_video.md
-    - Play With Billboard: tutorials/play_with_billboard.md
-    - Play With Component: tutorials/play_with_component.md
-  - Programming Guide:
-    - Overview: programming_guide/overview.md
-    - Features:
-      - Scene Graph: programming_guide/features/scene_graph.md
-      - Rendering: programming_guide/features/rendering.md
-      - Loading Assets: programming_guide/features/loading_assets.md
-      - Render Data: programming_guide/features/render_data.md
-      - Meshes: programming_guide/features/meshes.md
-      - Materials: programming_guide/features/materials.md
-      - Lighting: programming_guide/features/lighting.md
-      - Phong Shader Template: programming_guide/features/phong_shader_template.md
-      - Built-In Legacy Shader: programming_guide/features/builtin_legacy_shader.md
-      - Picking: programming_guide/features/picking.md
-    - Build Instructions: programming_guide/build_instructions.md
-    - SXR Settings File: programming_guide/sxr_settings_file.md
-    - FAQ: programming_guide/faq.md
-    - Video Tutorials: programming_guide/video_tutorials.md
-    - Sample Code: programming_guide/sample_code.md
-  - API Reference: api_reference.md
+  - Android:
+    - Getting Started: getting_started.md
+    - Tutorials:
+      - Simple SXR app: tutorials/simple_sxr_app.md
+      - Play With Materials: tutorials/play_with_material.md
+      - Play With 3D Models: tutorials/play_with_3d_models.md
+      - Play With Animation: tutorials/play_with_animation.md
+      - Play With Controller: tutorials/play_with_controller.md
+      - Play With 360 Video: tutorials/play_with_360_video.md
+      - Play With Billboard: tutorials/play_with_billboard.md
+      - Play With Component: tutorials/play_with_component.md
+    - Programming Guide:
+      - Overview: programming_guide/overview.md
+      - Features:
+        - Scene Graph: programming_guide/features/scene_graph.md
+        - Rendering: programming_guide/features/rendering.md
+        - Loading Assets: programming_guide/features/loading_assets.md
+        - Render Data: programming_guide/features/render_data.md
+        - Meshes: programming_guide/features/meshes.md
+        - Materials: programming_guide/features/materials.md
+        - Lighting: programming_guide/features/lighting.md
+        - Phong Shader Template: programming_guide/features/phong_shader_template.md
+        - Built-In Legacy Shader: programming_guide/features/builtin_legacy_shader.md
+        - Picking: programming_guide/features/picking.md
+      - Build Instructions: programming_guide/build_instructions.md
+      - SXR Settings File: programming_guide/sxr_settings_file.md
+      - FAQ: programming_guide/faq.md
+      - Video Tutorials: programming_guide/video_tutorials.md
+      - Sample Code: programming_guide/sample_code.md
+    - API Reference: api_reference.md
+  - Unity:
+    - Getting Started: getting_started.md
+    - Tutorials:
+      - Simple SXR app: tutorials/simple_sxr_app.md
   - Community: community.md
   - Blog:
     - Blender Addon for SXR: blog/blender_plugin_guide.md
