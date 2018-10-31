@@ -187,6 +187,8 @@
 
 .sample_card {
     height: 380px;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -302,7 +304,7 @@
             <h1>Sample Highlights</h1>
         </div>
         <div class="col-12 col-lg-3">
-            <div class="card mb-3 sample_card">
+            <div class="card mb-4 sample_card">
                 <img class="card-img-top" src="/images/samples/img_1_360photo.png" alt="360 Photo">
                 <div class="card-body">
                     <h5 class="card-title">360 Photo</h5>
@@ -314,7 +316,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-3" >
-            <div class="card mb-3 sample_card">
+            <div class="card mb-4 sample_card">
                 <img class="card-img-top" src="/images/samples/img_2_360video.png" alt="360 Video">
                 <div class="card-body">
                     <h5 class="card-title">360 Video</h5>
@@ -326,7 +328,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-3">
-            <div class="card mb-3 sample_card">
+            <div class="card mb-4 sample_card">
                 <img class="card-img-top" src="/images/samples/img_3_3dcursor.png" alt="3D Cursor">
                 <div class="card-body">
                     <h5 class="card-title">3D Cursor</h5>
@@ -338,7 +340,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-3">
-            <div class="card mb-3 sample_card">
+            <div class="card mb-4 sample_card">
                 <img class="card-img-top" src="/images/samples/img_4_accessibility.png" alt="Accessibility">
                 <div class="card-body">
                     <h5 class="card-title">Accessibility</h5>
@@ -352,7 +354,7 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-3">
-            <div class="card mb-3 sample_card">
+            <div class="card mb-4 sample_card">
                 <img class="card-img-top" src="/images/samples/img_9_controller.png" alt="Controller">
                 <div class="card-body">
                     <h5 class="card-title">Controller</h5>
@@ -364,7 +366,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-3">
-            <div class="card mb-3 sample_card">
+            <div class="card mb-4 sample_card">
                 <img class="card-img-top" src="/images/samples/img_32_solarsystem.png" alt="Controller">
                 <div class="card-body">
                     <h5 class="card-title">Solar System</h5>
@@ -376,7 +378,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-3">
-            <div class="card mb-3 sample_card">
+            <div class="card mb-4 sample_card">
                 <img class="card-img-top" src="/images/samples/img_15_immersepedia.png" alt="Immersivepedia">
                 <div class="card-body">
                     <h5 class="card-title">Immersivepedia</h5>
@@ -388,7 +390,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-3">
-            <div class="card mb-3 sample_card">
+            <div class="card mb-4 sample_card">
                 <img class="card-img-top" src="/images/samples/img_16_javascript.png" alt="Javascript">
                 <div class="card-body">
                     <h5 class="card-title">Javascript</h5>
