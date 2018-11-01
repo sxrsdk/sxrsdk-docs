@@ -130,6 +130,10 @@
     position: relative;   
 }
 
+.background_grey {
+    background-color: #f7f7f7;
+}
+
 .layer {
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -233,8 +237,8 @@
 </style>
 
 <div class="container-fluid">
-    <div class="row section">
-        <div class="col-12 col-lg-6 mx-auto">
+    <div class="row section justify-content-center">
+        <div class="col-12 col-lg-6 ">
             <img class="center_child" src="images/SXR_Logo_Blue_Text_Inline.png">
         </div>
       </div>
@@ -287,14 +291,27 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col section background_cta center_parent">
-            <div class="center_child">
-                <a class="button btn_red"  style="color: white;" href="getting_started">
-                    Getting Started
+    <div class="row justify-content-center background_grey">
+        <div class="col-12 centered">
+            <h1>Getting Started</h1>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="text-center mb-3" style="height: 120px;">
+                <img class="img-responsive" src="images/getting_started_android.png">
+            </div>
+            <div class="text-center mb-3">
+                <a class="btn btn-primary" href="getting_started" style="color:white;">
+                    Android
                 </a>
-                <a class="typeform-share button btn_blue" style="color: white;" href="https://nitosan.typeform.com/to/fw9Ylx" data-mode="popup" style="" target="_blank">
-                    Leave Feedback
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="text-center mb-3" style="height: 120px;">
+                <img class="img-responsive" src="images/getting_started_unity.png">
+            </div>
+            <div class="text-center mb-3">
+                <a class="btn btn-primary" href="/unity/getting_started" style="color:white;">
+                    Unity
                 </a>
             </div>
         </div>
