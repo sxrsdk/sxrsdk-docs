@@ -234,7 +234,7 @@
 
 <div class="container-fluid">
     <div class="row section">
-        <div class="col">
+        <div class="col-12 col-lg-6 mx-auto">
             <img class="center_child" src="images/SXR_Logo_Blue_Text_Inline.png">
         </div>
       </div>
