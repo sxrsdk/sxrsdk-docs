@@ -25,6 +25,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Overview:
+    - Supported Devices: overview/supported_devices.md
   - Android:
     - Getting Started: getting_started.md
     - Tutorials:
@@ -56,7 +58,7 @@ nav:
       - Sample Code: programming_guide/sample_code.md
     - API Reference: api_reference.md
   - Unity:
-    - Getting Started: getting_started.md
+    - Getting Started: unity/getting_started.md
     - Tutorials:
       - Simple SXR app: tutorials/simple_sxr_app.md
   - Community: community.md
