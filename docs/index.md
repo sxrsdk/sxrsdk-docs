@@ -299,7 +299,7 @@
             <div class="text-center mb-3" style="height: 120px;">
                 <img class="img-responsive" src="images/getting_started_android.png">
             </div>
-            <div class="text-center mb-3">
+            <div class="text-center mb-5">
                 <a class="btn btn-primary" href="getting_started" style="color:white;">
                     Android
                 </a>
@@ -309,7 +309,7 @@
             <div class="text-center mb-3" style="height: 120px;">
                 <img class="img-responsive" src="images/getting_started_unity.png">
             </div>
-            <div class="text-center mb-3">
+            <div class="text-center mb-5">
                 <a class="btn btn-primary" href="/unity/getting_started" style="color:white;">
                     Unity
                 </a>

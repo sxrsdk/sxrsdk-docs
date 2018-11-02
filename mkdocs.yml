@@ -59,8 +59,6 @@ nav:
     - API Reference: api_reference.md
   - Unity:
     - Getting Started: unity/getting_started.md
-    - Tutorials:
-      - Simple SXR app: tutorials/simple_sxr_app.md
   - Community: community.md
   - Blog:
     - Blender Addon for SXR: blog/blender_plugin_guide.md
