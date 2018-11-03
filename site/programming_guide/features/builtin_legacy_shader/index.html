@@ -1,0 +1,1778 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for the Samsung XR SDK">
+      
+      
+      
+        <meta name="author" content="Samsung XR SDK Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>Built-In Legacy Shader - Samsung XR SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#sxrmaterialsxrshadertypephong" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Samsung XR SDK" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Samsung XR SDK
+              </span>
+              <span class="md-header-nav__topic">
+                Built-In Legacy Shader
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/sxrsdk/sxrsdk-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Samsung XR SDK" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Samsung XR SDK
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/sxrsdk/sxrsdk-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Overview
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../overview/supported_devices/" title="Supported Devices" class="md-nav__link">
+      Supported Devices
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Android
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/simple_sxr_app/" title="Simple SXR app" class="md-nav__link">
+      Simple SXR app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/play_with_material/" title="Play With Materials" class="md-nav__link">
+      Play With Materials
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/play_with_3d_models/" title="Play With 3D Models" class="md-nav__link">
+      Play With 3D Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/play_with_animation/" title="Play With Animation" class="md-nav__link">
+      Play With Animation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/play_with_controller/" title="Play With Controller" class="md-nav__link">
+      Play With Controller
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/play_with_360_video/" title="Play With 360 Video" class="md-nav__link">
+      Play With 360 Video
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/play_with_billboard/" title="Play With Billboard" class="md-nav__link">
+      Play With Billboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/play_with_component/" title="Play With Component" class="md-nav__link">
+      Play With Component
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Programming Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Programming Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-3-2">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-2">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scene_graph/" title="Scene Graph" class="md-nav__link">
+      Scene Graph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rendering/" title="Rendering" class="md-nav__link">
+      Rendering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../loading_assets/" title="Loading Assets" class="md-nav__link">
+      Loading Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../render_data/" title="Render Data" class="md-nav__link">
+      Render Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../meshes/" title="Meshes" class="md-nav__link">
+      Meshes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../materials/" title="Materials" class="md-nav__link">
+      Materials
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lighting/" title="Lighting" class="md-nav__link">
+      Lighting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../phong_shader_template/" title="Phong Shader Template" class="md-nav__link">
+      Phong Shader Template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Built-In Legacy Shader
+      </label>
+    
+    <a href="./" title="Built-In Legacy Shader" class="md-nav__link md-nav__link--active">
+      Built-In Legacy Shader
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypephong" title="SXRMaterial.SXRShaderType.Phong" class="md-nav__link">
+    SXRMaterial.SXRShaderType.Phong
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypephonglayered" title="SXRMaterial.SXRShaderType.PhongLayered" class="md-nav__link">
+    SXRMaterial.SXRShaderType.PhongLayered
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeunlithorizontalstereo" title="SXRMaterial.SXRShaderType.UnlitHorizontalStereo" class="md-nav__link">
+    SXRMaterial.SXRShaderType.UnlitHorizontalStereo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeunlitvertictalstereo" title="SXRMaterial.SXRShaderType.UnlitVertictalStereo" class="md-nav__link">
+    SXRMaterial.SXRShaderType.UnlitVertictalStereo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeoes" title="SXRMaterial.SXRShaderType.OES" class="md-nav__link">
+    SXRMaterial.SXRShaderType.OES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeoeshorizontalstereo" title="SXRMaterial.SXRShaderType.OESHorizontalStereo" class="md-nav__link">
+    SXRMaterial.SXRShaderType.OESHorizontalStereo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeoesverticalstereo" title="SXRMaterial.SXRShaderType.OESVerticalStereo" class="md-nav__link">
+    SXRMaterial.SXRShaderType.OESVerticalStereo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypecubemap" title="SXRMaterial.SXRShaderType.Cubemap" class="md-nav__link">
+    SXRMaterial.SXRShaderType.Cubemap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypecubemapreflection" title="SXRMaterial.SXRShaderType.CubemapReflection" class="md-nav__link">
+    SXRMaterial.SXRShaderType.CubemapReflection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypetexture" title="SXRMaterial.SXRShaderType.Texture" class="md-nav__link">
+    SXRMaterial.SXRShaderType.Texture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypelightmap" title="SXRMaterial.SXRShaderType.Lightmap" class="md-nav__link">
+    SXRMaterial.SXRShaderType.Lightmap
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../picking/" title="Picking" class="md-nav__link">
+      Picking
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build_instructions/" title="Build Instructions" class="md-nav__link">
+      Build Instructions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sxr_settings_file/" title="SXR Settings File" class="md-nav__link">
+      SXR Settings File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../video_tutorials/" title="Video Tutorials" class="md-nav__link">
+      Video Tutorials
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sample_code/" title="Sample Code" class="md-nav__link">
+      Sample Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../api_reference/" title="API Reference" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Unity
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Unity
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../unity/getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../community/" title="Community" class="md-nav__link">
+      Community
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Blog
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Blog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../blog/blender_plugin_guide/" title="Blender Addon for SXR" class="md-nav__link">
+      Blender Addon for SXR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../blog/2017_4_17_x3d/" title="SXR and the X3D file format" class="md-nav__link">
+      SXR and the X3D file format
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/contribution/" title="Contribution" class="md-nav__link">
+      Contribution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/certificate/" title="Developer Certificate of Origin" class="md-nav__link">
+      Developer Certificate of Origin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/release_notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/roadmap/" title="Roadmap" class="md-nav__link">
+      Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/privacy_policy/" title="Privacy Policy" class="md-nav__link">
+      Privacy Policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/terms_of_service/" title="Terms of Service" class="md-nav__link">
+      Terms of Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/marketing_resource/" title="Marketing Resources" class="md-nav__link">
+      Marketing Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/credits/" title="Credits" class="md-nav__link">
+      Credits
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypephong" title="SXRMaterial.SXRShaderType.Phong" class="md-nav__link">
+    SXRMaterial.SXRShaderType.Phong
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypephonglayered" title="SXRMaterial.SXRShaderType.PhongLayered" class="md-nav__link">
+    SXRMaterial.SXRShaderType.PhongLayered
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeunlithorizontalstereo" title="SXRMaterial.SXRShaderType.UnlitHorizontalStereo" class="md-nav__link">
+    SXRMaterial.SXRShaderType.UnlitHorizontalStereo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeunlitvertictalstereo" title="SXRMaterial.SXRShaderType.UnlitVertictalStereo" class="md-nav__link">
+    SXRMaterial.SXRShaderType.UnlitVertictalStereo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeoes" title="SXRMaterial.SXRShaderType.OES" class="md-nav__link">
+    SXRMaterial.SXRShaderType.OES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeoeshorizontalstereo" title="SXRMaterial.SXRShaderType.OESHorizontalStereo" class="md-nav__link">
+    SXRMaterial.SXRShaderType.OESHorizontalStereo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypeoesverticalstereo" title="SXRMaterial.SXRShaderType.OESVerticalStereo" class="md-nav__link">
+    SXRMaterial.SXRShaderType.OESVerticalStereo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypecubemap" title="SXRMaterial.SXRShaderType.Cubemap" class="md-nav__link">
+    SXRMaterial.SXRShaderType.Cubemap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypecubemapreflection" title="SXRMaterial.SXRShaderType.CubemapReflection" class="md-nav__link">
+    SXRMaterial.SXRShaderType.CubemapReflection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypetexture" title="SXRMaterial.SXRShaderType.Texture" class="md-nav__link">
+    SXRMaterial.SXRShaderType.Texture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sxrmaterialsxrshadertypelightmap" title="SXRMaterial.SXRShaderType.Lightmap" class="md-nav__link">
+    SXRMaterial.SXRShaderType.Lightmap
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/sxrsdk/sxrsdk-docs/edit/master/docs/programming_guide/features/builtin_legacy_shader.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Built-In Legacy Shader</h1>
+                
+                <p>SXR SDK provides a set of built-in shaders for you to use in your applications. Although you can write custom shaders, for many applications these built-in shaders will be all that you need.</p>
+<h2 id="sxrmaterialsxrshadertypephong">SXRMaterial.SXRShaderType.Phong</h2>
+<p>The Phong shader implements the phong lighting model for multiple light sources. All of the models imported by the asset loader use the phong shader so they will automatically respond to the light sources in the scene. This shader maps multiple textures onto a mesh illuminated by any light sources in the scene. Although it supports many different uniforms, you will typically only use a few of them.</p>
+<p>Depending on which uniforms you use and the format of your mesh, SXR SDK will generate a custom native shader optimized for your specific usage. Adding or removing a light source from the scene can cause a new native shader to be recompiled.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ambientTexture</td>
+<td>sampler2D</td>
+<td>ambient texture</td>
+</tr>
+<tr>
+<td>diffuseTexture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>specularTexture</td>
+<td>sampler2D</td>
+<td>specular texture</td>
+</tr>
+<tr>
+<td>opacityTexture</td>
+<td>sampler2D</td>
+<td>opacity texture (alpha channel)</td>
+</tr>
+<tr>
+<td>normalTexture</td>
+<td>sampler2D</td>
+<td>normal texture</td>
+</tr>
+<tr>
+<td>emissiveTexture</td>
+<td>sampler2D</td>
+<td>emissive texture</td>
+</tr>
+<tr>
+<td>lightmapTexture</td>
+<td>sampler2D</td>
+<td>lightmap texture</td>
+</tr>
+<tr>
+<td>ambient_color</td>
+<td>vec4</td>
+<td>ambient color</td>
+</tr>
+<tr>
+<td>diffuse_color</td>
+<td>vec4</td>
+<td>diffuse color</td>
+</tr>
+<tr>
+<td>specular_color</td>
+<td>vec4</td>
+<td>specular color</td>
+</tr>
+<tr>
+<td>emissive_color</td>
+<td>vec4</td>
+<td>emissive color</td>
+</tr>
+<tr>
+<td>specular_exponent</td>
+<td>float</td>
+<td>specular exponent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypephonglayered">SXRMaterial.SXRShaderType.PhongLayered</h2>
+<p>This shader performs the same computations as the Phong shader but allows layering of ambient, diffuse, specular, opacity and emissive texture maps. This shader supports up to two textures of each type and blends them at run time. It is primarily used for supporting FBX files with layered textures. Unless your application needs this functionality, the Phong shader is more efficient.</p>
+<p>The following blend operations are supported:</p>
+<table>
+<thead>
+<tr>
+<th>value</th>
+<th>operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>multiply</td>
+</tr>
+<tr>
+<td>1</td>
+<td>add</td>
+</tr>
+<tr>
+<td>2</td>
+<td>subtract</td>
+</tr>
+<tr>
+<td>3</td>
+<td>divice</td>
+</tr>
+<tr>
+<td>4</td>
+<td>smooth add</td>
+</tr>
+<tr>
+<td>5</td>
+<td>signed add</td>
+</tr>
+</tbody>
+</table>
+<p>This table gives the additional uniforms for the Phong Layered shader. It supports all of the uniforms for the Phong shader as well.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ambientTexture1</td>
+<td>sampler2D</td>
+<td>second ambient texture</td>
+</tr>
+<tr>
+<td>diffuseTexture1</td>
+<td>sampler2D</td>
+<td>second diffuse texture</td>
+</tr>
+<tr>
+<td>specularTexture1</td>
+<td>sampler2D</td>
+<td>second specular texture</td>
+</tr>
+<tr>
+<td>opacityTexture1</td>
+<td>sampler2D</td>
+<td>second opacity texture</td>
+</tr>
+<tr>
+<td>emissiveTexture1</td>
+<td>sampler2D</td>
+<td>second emissive texture</td>
+</tr>
+<tr>
+<td>lightmapTexture1</td>
+<td>sampler2D</td>
+<td>second lightmap texture</td>
+</tr>
+<tr>
+<td>ambient_color</td>
+<td>vec4</td>
+<td>ambient color</td>
+</tr>
+<tr>
+<td>diffuse_color</td>
+<td>vec4</td>
+<td>diffuse color</td>
+</tr>
+<tr>
+<td>specular_color</td>
+<td>vec4</td>
+<td>specular color</td>
+</tr>
+<tr>
+<td>emissive_color</td>
+<td>vec4</td>
+<td>emissive color</td>
+</tr>
+<tr>
+<td>specular_exponent</td>
+<td>float</td>
+<td>specular exponent</td>
+</tr>
+<tr>
+<td>ambientTexture1_blendop</td>
+<td>int</td>
+<td>ambient texture blend operation</td>
+</tr>
+<tr>
+<td>diffuseTexture1_blendop</td>
+<td>int</td>
+<td>diffuse texture blend operation</td>
+</tr>
+<tr>
+<td>specularTexture1_blendop</td>
+<td>int</td>
+<td>specular texture blend operation</td>
+</tr>
+<tr>
+<td>opacityTexture1_blendop</td>
+<td>int</td>
+<td>opacity texture blend operation</td>
+</tr>
+<tr>
+<td>emissiveTexture1_blendop</td>
+<td>int</td>
+<td>emissive texture blend operation</td>
+</tr>
+<tr>
+<td>lightmapTexture1_blendop</td>
+<td>int</td>
+<td>lightmap texture blend operation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypeunlithorizontalstereo">SXRMaterial.SXRShaderType.UnlitHorizontalStereo</h2>
+<p>Displays a single 2D texture across the framebuffer horizontally for both eyes. The computed fragment color is the product of the diffuse texture, diffuse color and opacity. It requires the vertex to have positions and texture coordinates. Normals are not required because lights in the scene are not used by this shader. The u_right parameter controls whether it displays on the left half or the right half of the output display.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_color</td>
+<td>vec3</td>
+<td>RGB diffuse color</td>
+</tr>
+<tr>
+<td>u_opacity</td>
+<td>float</td>
+<td>alpha for transparency</td>
+</tr>
+<tr>
+<td>u_right</td>
+<td>int</td>
+<td>1 = right eye, 0 = left</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypeunlitvertictalstereo">SXRMaterial.SXRShaderType.UnlitVertictalStereo</h2>
+<p>Displays a single 2D texture across the framebuffer vertically for both eyes.  The computed fragment color is the product of the diffuse texture, diffuse color and opacity. It requires the vertex to have positions and texture coordinates. Normals are not required because lights in the scene are not used by this shader. The u_right parameter controls whether it displays on the top half or the bottom half of the output display.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_color</td>
+<td>vec3</td>
+<td>RGB diffuse color</td>
+</tr>
+<tr>
+<td>u_opacity</td>
+<td>float</td>
+<td>alpha for transparency</td>
+</tr>
+<tr>
+<td>u_right</td>
+<td>int</td>
+<td>1 = right eye, 0 = left</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypeoes">SXRMaterial.SXRShaderType.OES</h2>
+<p>Maps an external 2D texture onto the mesh. The computed fragment color is the product of the diffuse texture, diffuse color and opacity. It requires the vertex to have positions and texture coordinates. Normals are not required because lights in the scene are not used by this shader. The texture supplied as u_ texture must be and OES external texture (type GL_TEXTURE_EXTERNAL_OES, not GL_TEXTURE_2D) as this shader uses samplerExternalOES as opposed to sampler2D.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_color</td>
+<td>vec3</td>
+<td>RGB diffuse color</td>
+</tr>
+<tr>
+<td>u_opacity</td>
+<td>float</td>
+<td>alpha for transparency</td>
+</tr>
+<tr>
+<td>u_right</td>
+<td>int</td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypeoeshorizontalstereo">SXRMaterial.SXRShaderType.OESHorizontalStereo</h2>
+<p>Displays a single external 2D texture across the framebuffer vertically for both eyes. The computed fragment color is the product of the diffuse texture, diffuse color and opacity. It requires the vertex to have positions and texture coordinates. Normals are not required because lights in the scene are not used by this shader. The texture supplied as u_ texture must be and OES external texture (type GL_TEXTURE_EXTERNAL_OES, not GL_TEXTURE_2D) as this shader uses samplerExternalOES as opposed to sampler2D.The u_right parameter controls whether it displays on the left half or the right half of the output display.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_color</td>
+<td>vec3</td>
+<td>RGB diffuse color</td>
+</tr>
+<tr>
+<td>u_opacity</td>
+<td>float</td>
+<td>alpha for transparency</td>
+</tr>
+<tr>
+<td>u_right</td>
+<td>int</td>
+<td>1 = right eye, 0 = left</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypeoesverticalstereo">SXRMaterial.SXRShaderType.OESVerticalStereo</h2>
+<p>Displays a single external 2D texture across the framebuffer vertically for both eyes. The computed fragment color is the product of the diffuse texture, diffuse color and opacity. It requires the vertex to have positions and texture coordinates. Normals are not required because lights in the scene are not used by this shader. The texture supplied as u_ texture must be and OES external texture (type GL_TEXTURE_EXTERNAL_OES, not GL_TEXTURE_2D) as this shader uses samplerExternalOES as opposed to sampler2D. The u_right parameter controls whether it displays on the top half or the bottom half of the output display.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_color</td>
+<td>vec3</td>
+<td>RGB diffuse color</td>
+</tr>
+<tr>
+<td>u_opacity</td>
+<td>float</td>
+<td>alpha for transparency</td>
+</tr>
+<tr>
+<td>u_right</td>
+<td>int</td>
+<td>1 = right eye, 0 = left</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypecubemap">SXRMaterial.SXRShaderType.Cubemap</h2>
+<p>Maps a cubemap texture onto the mesh. The computed fragment color is the product of the diffuse texture, diffuse color and opacity. It requires the vertex to have positions and texture coordinates. Normals are not required because lights in the scene are not used by this shader. The diffuse texture must be a cube map texture (six different textures for each face of the cube).</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_color</td>
+<td>vec3</td>
+<td>RGB diffuse color</td>
+</tr>
+<tr>
+<td>u_opacity</td>
+<td>float</td>
+<td>alpha for transparency</td>
+</tr>
+<tr>
+<td>u_right</td>
+<td>int</td>
+<td>description</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypecubemapreflection">SXRMaterial.SXRShaderType.CubemapReflection</h2>
+<p>Wraps a cubemap texture around a mesh as a reflection map which varies with the viewpoint. The computed fragment color is the product of the diffuse texture, diffuse color and opacity. It requires the vertex to have positions and texture coordinates. Normals are not required because lights in the scene are not used by this shader. The diffuse texture must be a cube map texture (six different textures for each face of the cube).</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_color</td>
+<td>vec3</td>
+<td>RGB diffuse color</td>
+</tr>
+<tr>
+<td>u_opacity</td>
+<td>float</td>
+<td>alpha for transparency</td>
+</tr>
+<tr>
+<td>u_view_i</td>
+<td>mat4atrix</td>
+<td>view matrix</td>
+</tr>
+<tr>
+<td>v_viewspace_position</td>
+<td>vec3</td>
+<td>view space position</td>
+</tr>
+<tr>
+<td>v_viewspace_normal</td>
+<td>vec3</td>
+<td>view space normal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypetexture">SXRMaterial.SXRShaderType.Texture</h2>
+<p>Maps a single 2D texture onto a mesh with light sources. The computed fragment color is the product of the diffuse texture, diffuse color and opacity as illuminated the lights in the scene. It requires the vertex to have positions, normals and texture coordinates. If the scene is not lit, the material and light intensity properties are ignored. SXRPhongShader provides the same functionality and supports multiple layered textures.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_color</td>
+<td>vec3</td>
+<td>RGB diffuse color</td>
+</tr>
+<tr>
+<td>u_opacity</td>
+<td>float</td>
+<td>alpha for transparency</td>
+</tr>
+<tr>
+<td>ambient_color</td>
+<td>vec4</td>
+<td>color reflected by ambient light</td>
+</tr>
+<tr>
+<td>diffuse_color</td>
+<td>vec4</td>
+<td>color reflected by diffuse light</td>
+</tr>
+<tr>
+<td>specular_color</td>
+<td>float</td>
+<td>exponent for specular reflection</td>
+</tr>
+<tr>
+<td>specular_exponent</td>
+<td>vec4</td>
+<td>color reflected by specular light</td>
+</tr>
+<tr>
+<td>ambient_intensity</td>
+<td>vec4</td>
+<td>intensity of ambient light</td>
+</tr>
+<tr>
+<td>diffuse_intensity</td>
+<td>vec4</td>
+<td>intensity of diffuse light</td>
+</tr>
+<tr>
+<td>specular_intensity</td>
+<td>vec4</td>
+<td>intensity of specular light</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sxrmaterialsxrshadertypelightmap">SXRMaterial.SXRShaderType.Lightmap</h2>
+<p>Maps a lightmap texture onto a mesh. The computed fragment color is the product of the diffuse texture, diffuse color and opacity as illuminated by a light map. It requires the vertex to have positions, normals and texture coordinates. SXRPhongShader supports light mapping integrated with other surface shading capabilities.</p>
+<table>
+<thead>
+<tr>
+<th>uniform</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u_main_texture</td>
+<td>sampler2D</td>
+<td>diffuse texture</td>
+</tr>
+<tr>
+<td>u_lightmap_texture</td>
+<td>sampler2D</td>
+<td>light map texture</td>
+</tr>
+<tr>
+<td>u_lightmap_offset</td>
+<td>vec2</td>
+<td>light map offset</td>
+</tr>
+<tr>
+<td>u_lightmap_scale</td>
+<td>vec2</td>
+<td>light map scal</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../phong_shader_template/" title="Phong Shader Template" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Phong Shader Template
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../picking/" title="Picking" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Picking
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Samsung
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-105100670-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
