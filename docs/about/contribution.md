@@ -5,7 +5,7 @@ Getting involved with the SXR SDK Project is easy.
 To contribute to the SXR SDK Project (such as reporting bugs and submitting patches):
 
 * Follow the [GitHub contributor guidelines](https://guides.github.com/activities/contributing-to-open-source/)
-* Add the [SXR DCO](certificate) signoff to each commit message during development.
+* Add the [SXR DCO](certificate.md) signoff to each commit message during development.
 
 ##Development Process
 
