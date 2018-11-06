@@ -15,5 +15,6 @@ SXR is designed to work with a veriety of Android devices listed below:
 |              | Galaxy S6 Edge |
 |              | Galaxy S6+     |
 |              |Gear VR headset |
+|              |Project Aurora AR headset|
 | Google       |Daydream headset|
 |              |[Daydream-ready phone](https://vr.google.com/daydream/phones/)|
