@@ -59,6 +59,7 @@ nav:
     - API Reference: api_reference.md
   - Unity:
     - Getting Started: unity/getting_started.md
+  - Downloads: downloads.md
   - Community: community.md
   - Blog:
     - Blender Addon for SXR: blog/blender_plugin_guide.md

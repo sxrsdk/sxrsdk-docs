@@ -1,51 +1,55 @@
-##We respect your privacy and are committed to protecting it.
+## Privacy
 
-We require that you provide some personal information, to provide SXR SDK Project services to its Members, and to improve the SXR SDK Project. The type of information collected, how it is used, and the information privacy choices you have, are detailed in this policy.
+All information we collect on the Website is subject to Samsung’s Global Privacy Policy, and its terms are made a part of these Terms of Use by this reference. Samsung’s Global Privacy Policy may be found at https://account.samsung.com/membership/pp. By using the Website, you consent to all actions taken by us with respect to your information in compliance with the Privacy Policy.
 
-##Information Collection and Use
+## SAMSUNG GLOBAL PRIVACY POLICY HIGHLIGHTS
 
-We collect the information you provide when you register for an account or complete an information request form.
+### Scope
 
-We use this information to satisfy your requests for further information, to customize our responses and our future communication with you, and to contact you, regarding development and events in the SXR SDK Project and/or Project areas that you have expressed general interest in.
+This Privacy Policy applies to any Samsung device, website, or online application that refers to or links to the Policy (collectively, our “Services”). This Privacy Policy applies regardless of whether you use a computer, mobile phone, tablet, TV or other device to access our Services.
 
-We make every effort to allow you to opt-in and opt-out of receiving SXR SDK Project messages. However, if you are receiving messages from us and cannot find a way to unsubscribe, please contact us at info@gearvrf.org
+### Information We Collect
 
-##Information Sharing
+We collect various types of information in connection with the Services, including:
 
-We will not release your personal information to anyone by any method, including selling, renting, or sharing, unless:
+* Information you provide directly to us;
+* Information we collect about your use of our Services; and
+* Information we obtain from third-party sources.
 
-* You grant us permission.
-* We are required to do so by law.
+We may also seek your consent to collect information not described in the Privacy Policy.
 
-We will not share personal identification information data, either for single individuals or groups, with any parties, including those affiliated with the SXR SDK Project, such as members or sponsors.
+### Use and Sharing of Information
 
-##How We Use Cookies
+We use the information we collect to, among other things:
 
-The SXR SDK Project website uses cookies. A cookie is a small amount of text data, sent from our webserver to your browser, and stored on your device. The cookie is sent back to the webserver each time the browser connects to this website. We use cookies to personalize the website and to streamline your interaction with the website.
+* Provide the Services you request;
+* Understand the way you use the Services so that we can improve your experience;
+* Provide customized content and advertising; and
+* Otherwise with your consent.
 
-It may be possible to configure your browser to refuse cookies, or to ask you to accept each time a cookie is offered. If you choose not to accept cookies, areas of this website may have reduced functionality or performance.
+We may share your information with:
 
-Software on our servers or third-party web statics services may store your IP address and other information passed on by your browser (such as browser version, operating system, screen size, language, etc). samsungxr.org and/or third-party services will aggregate this information to provide usage statistics for this website. We use this information to optimize the design, structure, and performance of the Project website. In particular, Google Analytics is used to provide usage statistics. For more information, read the Google Analytics Privacy Policy.
+* Affiliates – the companies related to Samsung Electronics Co., Ltd. by common ownership or control.
+* Business partners - trusted companies that may provide information about products and services you might like.
+* Service providers - companies that provide services for or on behalf of Samsung.
+* Law enforcement - when we are required to do so or to protect Samsung and its users.
 
-##Data Security
+Additional Information about Specific Products and Services
 
-The SXR SDK Project is also committed to the security of your personal information. We train those who work on the SXR SDK Project on this privacy policy. The Project website uses SSL (Secure Sockets Layer) to protect your personal information, by encrypting your information when you send it to the SXR SDK Project.
+* Customerization Service
+* Samsung Mobile
+* Smart TV
 
-##Public Forum Content
+## How to Contact Us
 
-The SXR SDK Project makes available to its users several communication forums (such as mail lists, blogs, and others). Be aware that any information or messages you share in these forums immediately becomes public information. Exercise caution in determining whether to disclose any of your personal information. The SXR SDK Project is an open source website, intended to encourage creative thinking and free expression; however, the SXR SDK Project reserves the right to act as necessary to preserve the integrity of the website and its forums, including removing any and all posts deemed vulgar or inappropriate.
+### Privacy Office 
 
-##Children's Online Privacy
+Samsung Electronics America, Inc.
 
-Regarding children under the age of 13, the SXR SDK Project does not knowingly:
+85 Challenger Road
 
-* Accept personal information from them
-* Allow them to become registered members of the SXR SDK Project website
+Ridgefield Park, NJ 07660
 
-##Updates to this Privacy Policy
+or via email through the “Contact Us” section of https://www.samsung.com
 
-We may update this policy. We will contact you if we make any substantial changes in how we use your personal information. This privacy policy was last updated on March 25, 2015.
-
-##Contact Information
-
-If you have any questions about this privacy policy itself, or on how we use personal information in the SXR SDK Project, please contact us at info@gearvrf.org
+If you have specific questions or requests regarding your information, please contact us by sending an email to NAprivacy@sea.samsung.com. To the extent required by applicable law, if you request access to your information, you may be able to obtain your information based on your Samsung account(e.g., information about your use of the Services, or the settings of your devices, etc.)

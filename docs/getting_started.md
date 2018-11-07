@@ -9,25 +9,7 @@ Before starting to use the SXR SDK, make sure you download the following SDKs
 
 ## Hardware Requirements
 
-SXR SDK supports following devices
-
-* Gear VR compatible Samsung phone:
-    - Note 9
-    - Galaxy S9+
-    - Galaxy S9
-    - Note 8
-    - Galaxy S8
-    - Galaxy S8+
-    - Galaxy S7
-    - Galaxy S7 Edge
-    - Note 5
-    - Galaxy S6
-    - Galaxy S6 Edge
-    - Galaxy S6+
-* Samsung Gear VR headset
-* [Daydream-ready phone](https://vr.google.com/daydream/phones/)
-* Google Daydream View VR headset
-* Project Aurora AR headset
+* A Samsung XR [supported devices](/overview/supported_devices)
 
 ## Getting Started
 
