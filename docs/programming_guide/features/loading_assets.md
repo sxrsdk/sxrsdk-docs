@@ -1,5 +1,5 @@
 
-The SXR SDK supports loading of 3D content files both synchronously and asynchronously. Your application may issue a blocking load and wait for the asset or get a callback when the asset loading is finished. The SXR SDK can import .OBJ, .FBX, Collada  (.dae) and X3D file formats, as well as all file formats supported by [Assimp](http://www.assimp.org/main_features_formats.html). The SXR SDK can also read all commonly used bitmap file formats.
+The SXR SDK supports loading of 3D content files both synchronously and asynchronously. Your application may issue a blocking load and wait for the asset or get a callback when the asset loading is finished. The SXR SDK can import .OBJ, .FBX, Collada  (.dae) and X3D file formats, as well as all file formats supported by [Assimp](http://assimp.sourceforge.net/main_features_formats.html). The SXR SDK can also read all commonly used bitmap file formats.
 
 ## Loading a 3D Model
 
@@ -7,7 +7,7 @@ Loading models is handled by the SXRAssetLoader class which is accessible from t
 
 * "sd:" designates the model on the phone SD card.
 * "http:" or "https:" designates the model is on the internet.
-* No prefix meaqns the filename is relative to the "assets" directory.
+* No prefix means the filename is relative to the "assets" directory.
 
 For more flexibility, you can use the *SXRAndroidResource* class which lets you import assets from resources in your application or from an already open Android stream. Both models and textures can be loaded from SXRAndroidResource objects.
 
