@@ -1,6 +1,6 @@
 ##SXR SDK License
 
-The [SXR SDK software license](https://resources.samsungdevelopers.com/Gear_VR_and_Gear_360/GearVR_Framework_Project/050_Project_Details/GearVRf_Software_License) is under the Apache 2.0 license.
+The [SXR SDK software license](https://www.apache.org/licenses/LICENSE-2.0) is under the Apache 2.0 license.
 
 ##Open Source Software
 
