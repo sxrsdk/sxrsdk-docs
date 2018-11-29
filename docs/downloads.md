@@ -16,9 +16,22 @@ Latest Stable Version: `5.0.0`
 ext.gearvrfVersion='5.0.0'
 dependencies {
     implementation "org.gearvrf:framework:$gearvrfVersion"
-    implementation "org.gearvrf:backend_daydream:$gearvrfVersion"
-    implementation "org.gearvrf:backend_oculus:$gearvrfVersion"
 }
 ```
 
+   To use the Oculus backend add this to the dependencies:
+```
+    implementation "org.gearvrf:backend_oculus:$gearvrfVersion"
+```
 
+   To use the Daydream backend add this to the dependencies:
+```
+    implementation "org.gearvrf:backend_daydream:$gearvrfVersion"
+```
+
+   To use the Monoscopic backend add this to the dependencies:
+```
+    implementation "org.gearvrf:backend_monoscopic:$gearvrfVersion"
+```
+
+   Support for more than one backend should not be added to an app. Consider using product flavors if an app wants to target more than one backend.
