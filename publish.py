@@ -96,39 +96,53 @@ def gen_java_docs(base_path, out_path):
 
     # Generate frameworks
     sub_out_path = os.path.join(out_path, 'Framework')
-    src_path = os.path.join(base_path, 'SXR', 'Framework', 'framework', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
-
-    # Generate 3DCursor
-    sub_out_path = os.path.join(out_path, '3DCursor')
-    src_path = os.path.join(base_path, 'SXR', 'Extensions', '3DCursor', '3DCursorLibrary', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    src_path = os.path.join(base_path, 'SXR', 'SDK', 'sxrsdk', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
     # Generate DebugWebServer
     sub_out_path = os.path.join(out_path, 'DebugWebServer')
     src_path = os.path.join(base_path, 'SXR', 'Extensions', 'DebugWebServer', 'debugwebserver', 'src', 'main', 'java')
     gen_javadoc(src_path, sub_out_path, 'smcl.samsung')
 
+    # Generate 3DCursor
+    sub_out_path = os.path.join(out_path, '3DCursor')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', '3DCursor', '3DCursorLibrary', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
+
+    # Generate Mixed Reality
+    sub_out_path = os.path.join(out_path, 'MixedReality')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'MixedReality', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
+
+    # Generate ResonanceAudio
+    sub_out_path = os.path.join(out_path, 'ResonanceAudio')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'ResonanceAudio', 'resonanceaudio', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
+
     # Generate SceneSerializer
     sub_out_path = os.path.join(out_path, 'SceneSerializer')
     src_path = os.path.join(base_path, 'SXR', 'Extensions', 'SceneSerializer', 'sceneserializer', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
     # Generate WidgetPlugin
     sub_out_path = os.path.join(out_path, 'WidgetPlugin')
-    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'WidgetPlugin', 'widgetplugin', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'widgetLib', 'src')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
     # Generate sxr-physics
     sub_out_path = os.path.join(out_path, 'sxr-physics')
     src_path = os.path.join(base_path, 'SXR', 'Extensions', 'sxr-physics', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
     # Generate particle system
     sub_out_path = os.path.join(out_path, 'sxr-particlesystem')
     src_path = os.path.join(base_path, 'SXR', 'Extensions', 'sxr-particlesystem', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
+    # Generate Wear touchpad
+    sub_out_path = os.path.join(out_path, 'WearTouchPad')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'WearTouchPad', 'wear', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
 def gen_all_docs(out_path, api_template_path, version_num):
     # Check required commands
