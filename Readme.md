@@ -12,6 +12,7 @@ To view and publish the documentation, you have to install mkdocs first
 ```
 pip install mkdocs
 pip install mkdocs-material
+pip install BeautifulSoup
 ```
 
 ## Editing
@@ -36,5 +37,5 @@ use -deploy to specify where to upload the release
 A release version of Samsung XR SDK documentation site will be generated in the `site` folder
 
 ```
-python publish.py -v 3.3 -deploy github
+python publish.py -v 5.0 -deploy github
 ```

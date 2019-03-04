@@ -5,7 +5,7 @@ import shutil
 import subprocess
 import glob
 import argparse
-
+import codecs
 
 def get_curr_path():
     return os.path.dirname(os.path.realpath(__file__))
@@ -41,7 +41,9 @@ def copy_all(src, dst):
 
 def copy_tree(src, dst):
     if os.path.isdir(src):
-        shutil.copytree(src, dst)
+        from distutils.dir_util import copy_tree
+        copy_tree(src, dst)
+        # shutil.copytree(src, dst)
     elif os.path.exists(src):
         shutil.copy(src, dst)
 
@@ -54,6 +56,19 @@ def del_tree(path):
     else:
         print 'Invalid path: ' + path
 
+#recursively merge two folders including subfolders
+def merge_tree(root_src_dir, root_dst_dir):
+    for src_dir, dirs, files in os.walk(root_src_dir):
+        dst_dir = src_dir.replace(root_src_dir, root_dst_dir, 1)
+        if not os.path.exists(dst_dir):
+            os.makedirs(dst_dir)
+        for file_ in files:
+            src_file = os.path.join(src_dir, file_)
+            dst_file = os.path.join(dst_dir, file_)
+            if os.path.exists(dst_file):
+                print 'remove:' + dst_file
+                os.remove(dst_file)
+            shutil.copy(src_file, dst_dir)
 
 def update_version(file_path, version_num):
     fh = open(file_path, 'r')
@@ -96,39 +111,53 @@ def gen_java_docs(base_path, out_path):
 
     # Generate frameworks
     sub_out_path = os.path.join(out_path, 'Framework')
-    src_path = os.path.join(base_path, 'SXR', 'Framework', 'framework', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
-
-    # Generate 3DCursor
-    sub_out_path = os.path.join(out_path, '3DCursor')
-    src_path = os.path.join(base_path, 'SXR', 'Extensions', '3DCursor', '3DCursorLibrary', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    src_path = os.path.join(base_path, 'SXR', 'SDK', 'sxrsdk', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
     # Generate DebugWebServer
     sub_out_path = os.path.join(out_path, 'DebugWebServer')
     src_path = os.path.join(base_path, 'SXR', 'Extensions', 'DebugWebServer', 'debugwebserver', 'src', 'main', 'java')
     gen_javadoc(src_path, sub_out_path, 'smcl.samsung')
 
+    # Generate 3DCursor
+    sub_out_path = os.path.join(out_path, '3DCursor')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', '3DCursor', '3DCursorLibrary', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
+
+    # Generate Mixed Reality
+    sub_out_path = os.path.join(out_path, 'MixedReality')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'MixedReality', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
+
+    # Generate ResonanceAudio
+    sub_out_path = os.path.join(out_path, 'ResonanceAudio')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'ResonanceAudio', 'resonanceaudio', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
+
     # Generate SceneSerializer
     sub_out_path = os.path.join(out_path, 'SceneSerializer')
     src_path = os.path.join(base_path, 'SXR', 'Extensions', 'SceneSerializer', 'sceneserializer', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
     # Generate WidgetPlugin
     sub_out_path = os.path.join(out_path, 'WidgetPlugin')
-    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'WidgetPlugin', 'widgetplugin', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'widgetLib', 'src')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
     # Generate sxr-physics
     sub_out_path = os.path.join(out_path, 'sxr-physics')
     src_path = os.path.join(base_path, 'SXR', 'Extensions', 'sxr-physics', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
     # Generate particle system
     sub_out_path = os.path.join(out_path, 'sxr-particlesystem')
     src_path = os.path.join(base_path, 'SXR', 'Extensions', 'sxr-particlesystem', 'src', 'main', 'java')
-    gen_javadoc(src_path, sub_out_path, 'org.gearvrf')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
+    # Generate Wear touchpad
+    sub_out_path = os.path.join(out_path, 'WearTouchPad')
+    src_path = os.path.join(base_path, 'SXR', 'Extensions', 'WearTouchPad', 'wear', 'src', 'main', 'java')
+    gen_javadoc(src_path, sub_out_path, 'com.samsungxr')
 
 def gen_all_docs(out_path, api_template_path, version_num):
     # Check required commands
@@ -175,7 +204,7 @@ def gen_all_docs(out_path, api_template_path, version_num):
 
 def main():
     parser = argparse.ArgumentParser(description='Generate the documentation site for the Samsung XR SDK')
-    parser.add_argument('-v', metavar='Version', dest='version', help='specify SXR SDK version', default='v3.3')
+    parser.add_argument('-v', metavar='Version', dest='version', help='specify SXR SDK version', default='v5.0')
     parser.add_argument('-deploy', metavar='Deploy', dest='deploy', help='specify deploy target: github')
 
     args = parser.parse_args()
@@ -197,9 +226,20 @@ def main():
     # Copy api_reference and replace the placeholder api_reference in site
     print '=> Merging API reference with documentation'
     if os.path.isdir('site'):
-        del_tree('site/api_reference')
-        copy_tree('temp', 'site/api_reference')
         print '==> Add API reference'
+        copy_tree('temp', 'site/api_reference')
+        print '==> Update API reference link'
+        from bs4 import  BeautifulSoup
+        fp = open('site/api_reference/index.html')
+        soup = BeautifulSoup(fp, 'html.parser')
+        article = soup.find('article')
+        article.string = r'<iframe width="100%" height="800" frameBorder="0" src="index2.html"></iframe>'
+        new_content = soup.prettify(formatter=None)
+        fp.close()
+
+        file = codecs.open('site/api_reference/index.html', 'w', "utf-8")
+        file.write(new_content)
+        file.close()
     else:
         print '=> Error: Failed to find site directory please make sure mkdocs is setup correctly'
         return
